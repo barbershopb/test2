@@ -74,7 +74,7 @@ button {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 30px;
+	padding-top: 20px;
 	font-size: 18px;
 }
 .nav-main__title {
@@ -93,6 +93,7 @@ button {
 }	
 .nav-main__hidden {
 	visibility: hidden;
+	transition: .5s;
 	position: absolute;
 }
 @keyframes fadeIn {
@@ -200,7 +201,7 @@ button {
 .home__img {
 	margin-top: 0px;
 	margin-right: 110px;
-	max-width: 55vh;
+	max-width: 26%;
 }
 .footer-main {
 	display: flex;
@@ -255,22 +256,26 @@ button {
 	justify-content: space-between;
 	margin-top: 22px;
 }
-.classes-nav {
-	margin-top: 130px;
+.classes-nav,
+.trainers-nav {
+	margin-top: 70px;
 	margin-left: 200px;
 }
-.classes-nav__item {
+.classes-nav__item,
+.trainers-nav__item {
 	position: relative;
 	opacity: 0.5;
 	font-size: 18px;
 	line-height: 30px;
 	cursor: pointer;
 }
-.classes-nav__item_selected {
+.classes-nav__item_selected,
+.trainers-nav__item_selected {
 	position: relative;
 	opacity: 1;
 }
-.classes-nav__item:hover {
+.classes-nav__item:hover,
+.trainers-nav__item:hover {
 	opacity: 1;
 }
 .classes-nav__item_selected::before,
@@ -285,11 +290,12 @@ button {
 	font-size: 18px;
 }
 .classes__img {
-	max-width: 35vh;
+	max-width: 18%;
+	margin-right: 50px;
 }
 .classes {
 	max-width: 490px;
-	margin-top: 130px;
+	margin-top: 70px;
 	margin-right: 100px;
 }
 .classes__title {
@@ -301,29 +307,148 @@ button {
 .stream__subtitle {
 	font-size: 24px;
 	margin-top: 15px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .stream__text {
-	margin-bottom: 36px;
+	margin-bottom: 15px;
 }
 .button {
 	width: 284px;
 	height: 60px;
 	box-shadow: 11px 11px 50px rgba(0, 0, 0, 0.1);
+	padding-left: 40px;
 	border-radius: 29px;
 	color: #fff;
 	background-color: #f78e6a;
+	background-image: url(../img/button_el.png);
+	background-repeat: no-repeat;
+}
+.button_plus {
+	position: relative;
+}
+.button_plus::before {
+	position: absolute;
+	content: "+";
+	width: 5px;
+	height: 5px;
+	top: 13px;
+	left: 19px;
+	font-size: 30px;
 }
 .button:hover {
 	box-shadow: 6px 6px 20px #f78e6a;
 	transition: 0.7s;
 }
-.button-wrap {
+.firstlesson {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.firstlesson__img {
+	max-width: 30%;
+	margin-right: 161px;
+}
+.firstlesson-box {
+	max-width: 430px;
+	margin-top: 20px;
+}
+.firstlesson__discount {
+	margin-bottom: 15px;
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 60px;
+}
+.firstlesson__discount_big {
+	font-size: 80px;
+	background-image: linear-gradient(45deg, #f78e6a 0%, #fc66a2 100%);
+	background-clip: text;
+	color: #f78e6a;	
+}
+.firstlesson__text {
+	margin-bottom: 30px;
+	line-height: 30px;
+}
+.firstlesson-form input {
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	background: transparent;
+}
+.firstlesson-form input[placeholder] {
+	opacity: 0.6;
+}
+.firstlesson-form input:focus {
+	outline: 1px solid #f78e6a;
+}	
+.button_envelope {
 	position: relative;
 }
-.button-sign {
+.button_envelope::before {
 	position: absolute;
-	top: -22px;
-	left: 0px;
+	content: "";
+	width: 18px;
+	height: 14px;
+	top: 23px;
+	left: 19px;
+	background-image: url(../img/envelope.png);
+	background-repeat: no-repeat;
 }
-
+.firstlesson__politics {
+	margin-top: 15px;
+	font-size: 12px;
+	line-height: 20px;
+}
+.trainers-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 53px;
+}
+.trainers-nav {
+	margin-top: 65px;
+	margin-left: 60px;
+}
+.trainers-nav__item_selected::before,
+.trainers-nav__item:hover::before {
+	position: absolute;
+	content: "Trainer -";
+	top: -2px;
+	left: -80px;
+	background-image: linear-gradient(to top, #fc66a2 0%, #f78e6a 100%);
+	background-clip: text;
+	color: #f78e6a;
+	font-size: 18px;
+}
+.trainers__img {
+	max-width: 30%;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+.trainers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 740px;
+}
+.trainers__desc {
+	max-width: 440px;
+}
+.trainers__title {
+	font-size: 48px;
+	line-height: 36px;
+	margin-bottom: 22px;
+}
+.trainers__subtitle {
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 25px;
+}
+.trainers__text {
+	line-height: 30px;
+	margin-bottom: 20px;
+}
